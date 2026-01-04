@@ -1,9 +1,11 @@
 /* 1. Fondo general de la sección para eliminar el blanco */
 .capsulas {
     padding: 60px 10%;
-    background-color: #001a2c; /* El azul oscuro de tu código original */
+    background-color: #001a2c;
     color: white;
-    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+    display: block; /* Asegura que fluya como bloque */
+    height: auto;   /* Cambia min-height por height: auto */
+    overflow: visible; /* Permite que se vea lo que baja a la segunda fila */
 }
 
 /* 2. Centrar el título principal */
@@ -18,10 +20,11 @@
 /* 3. Ajuste del Grid */
 .grid-videos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px; /* Espacio entre videos */
-    max-width: 1100px; /* Un poco más ancho para mejor visualización */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Bajamos a 280px */
+    gap: 30px;
+    max-width: 1200px; /* Un poco más de aire */
     margin: 0 auto;
+    
 }
 
 /* 4. Estilo de la tarjeta de video */
