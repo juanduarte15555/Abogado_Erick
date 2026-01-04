@@ -1,94 +1,67 @@
-/* Sección Cápsulas */
-
-
-
+/* 1. Fondo general de la sección para eliminar el blanco */
 .capsulas {
     padding: 60px 10%;
-    background-color: #001a2c; /* Un azul más oscuro para contraste */
+    background-color: #001a2c; /* El azul oscuro de tu código original */
     color: white;
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
 }
 
-.titulo-capsulas {
+/* 2. Centrar el título principal */
+.titulo-principal {
     text-align: center;
-    margin-bottom: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: white;
+    font-family: serif; /* O la fuente que prefieras */
 }
 
+/* 3. Ajuste del Grid */
 .grid-videos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.video-card {
-    background: #002b49;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 0.3s;
-    border: 1px solid #c5a059;
-    max-width: 320px; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px; /* Espacio entre videos */
+    max-width: 1100px; /* Un poco más ancho para mejor visualización */
     margin: 0 auto;
 }
 
+/* 4. Estilo de la tarjeta de video */
+.video-card {
+    background: #002b49; /* El azul de las tarjetas */
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #c5a059; /* Marco dorado */
+    display: flex;
+    flex-direction: column;
+}
+
+/* 5. Títulos internos de los videos */
+.video-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.video-info h3 {
+    margin: 0;
+    color: #c5a059; /* Color dorado para el texto */
+    font-size: 1.2rem;
+}
+
+/* 6. Contenedor del reproductor */
 .video-wrapper {
-    position: relative;
     width: 100%;
-    height: 100%;
-    aspect-ratio: 7 / 7;
-    background: #000;
-    border: 2px solid #c5a059; /* El grosor y color del borde */
-    box-sizing: border-box;    /* Asegura que el borde no agrande el cuadro */
-    
-    /* Si quieres que el video no toque el borde (efecto marco), 
-       puedes añadir un pequeño padding: */
-    padding: 3px;
+    padding: 10px; /* Espacio interno para que el video no toque los bordes */
+    box-sizing: border-box;
 }
 
 .video-player {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 3px solid #c5a059; /* El marco dorado le da el toque de despacho */
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para que resalte */
+    border: 2px solid #c5a059; /* Refuerza el toque elegante */
 }
 
-/* Capa elegante sobre el video */
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.video-overlay:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.play-icon {
-    font-size: 50px;
-    color: #c5a059;
-    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
-}
-
-.video-info {
-    padding: 20px;
-}
-
-.video-info h3 {
-    margin: 0 0 10px 0;
-    color: #c5a059;
-    font-size: 1.2rem;
-}
-
-.video-info p {
-    font-size: 0.9rem;
-    color: #e0e0e0;
-    line-height: 1.4;
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .grid-videos {
+        grid-template-columns: 1fr;
+    }
 }
