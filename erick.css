@@ -1,0 +1,75 @@
+/* Configuración General */
+body {
+    font-family: 'Georgia', serif; /* Una fuente con remates da más seriedad */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Encabezado */
+.hero {
+    background-color: #002b49; /* Azul Oxford */
+    color: #c5a059; /* Dorado tenue */
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 17px solid #c5a059;
+}
+
+.foto-perfil {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%; /* Foto circular */
+    border: 10px solid #c5a059;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Sección Servicios (Cajas) */
+.servicios {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border: 7px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border-color: #002b49;
+}
+
+/* Contacto y Mapa */
+.contacto {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 50px 10%;
+    background-color: #c5a059;
+}
+
+.info-contacto, .mapa {
+    flex: 1;
+    min-width: 300px;
+}
+
+h2 {
+    color: #002b49;
+    border-bottom: 2px solid #c5a059;
+    display: inline-block;
+    padding-bottom: 5px;
+}

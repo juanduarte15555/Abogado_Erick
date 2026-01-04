@@ -1,0 +1,94 @@
+/* Sección Cápsulas */
+
+
+
+.capsulas {
+    padding: 60px 10%;
+    background-color: #001a2c; /* Un azul más oscuro para contraste */
+    color: white;
+}
+
+.titulo-capsulas {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.grid-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.video-card {
+    background: #002b49;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid #c5a059;
+    max-width: 320px; 
+    margin: 0 auto;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 7 / 7;
+    background: #000;
+    border: 2px solid #c5a059; /* El grosor y color del borde */
+    box-sizing: border-box;    /* Asegura que el borde no agrande el cuadro */
+    
+    /* Si quieres que el video no toque el borde (efecto marco), 
+       puedes añadir un pequeño padding: */
+    padding: 3px;
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 3px solid #c5a059; /* El marco dorado le da el toque de despacho */
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Sombra para que resalte */
+}
+
+/* Capa elegante sobre el video */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.video-overlay:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.play-icon {
+    font-size: 50px;
+    color: #c5a059;
+    filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
+.video-info {
+    padding: 20px;
+}
+
+.video-info h3 {
+    margin: 0 0 10px 0;
+    color: #c5a059;
+    font-size: 1.2rem;
+}
+
+.video-info p {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    line-height: 1.4;
+}
